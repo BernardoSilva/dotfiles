@@ -1,0 +1,8 @@
+brew "git"
+brew "tig"
+brew "the_silver_searcher"
+brew "git-extras"
+brew "pre-commit"
+brew "node"
+brew "tree"
+brew "cloc"
