@@ -1,0 +1,15 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+    name = Bernardo Silva
+    email = benny.stuff@gmail.com
+    signingkey = E6B3385029F04645CCFA8D3AE8528BF15F6BDE2B
+
+[commit]
+    gpgsign = true
+[core]
+    excludesfile = /Users/bernardo.silva/.gitignore_global
+    pager=
+ 
+[merge]
+    conflictstyle = diff3
