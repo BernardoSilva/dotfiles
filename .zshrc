@@ -8,6 +8,10 @@ dssh() {
     docker exec -it $1  /bin/bash
 }
 
+ssh_hosts() {
+    sed -n ‘s/Host//p’ ~/.ssh/config
+}
+
 # mac fix to allow to jum over a word
 bindkey "^[^[[C" forward-word
 bindkey "^[^[[D" backward-word
