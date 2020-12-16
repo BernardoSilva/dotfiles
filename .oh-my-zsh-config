@@ -2,9 +2,19 @@
 # set this at end of ~/.zshrc 
 # echo 'source $HOME/Dropbox/.myzshconfig' >> ~/.oh-my-zsh-config
 
-# Aliases for lazy people =D
-alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' -    -abbrev-commit"
+# Git
 alias gs="git status"
+alias gl="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --no-merges"
+
+# Show hidden files
+alias showFiles="defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app"
+# Hide hidden files
+alias hideFiles="defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app"
+
+
+# Start and stop postgres
+alias start-psql="brew services run postgresql@11"
+alias stop-psql="brew services stop postgresql@11"
 
 # Allow to ssh into a docker container by passing the container id
 dssh() {
@@ -14,6 +24,12 @@ dssh() {
 ssh_hosts() {
     sed -n ‘s/Host//p’ ~/.ssh/config
 }
+
+# Use Brew ruby
+export PATH=/usr/local/opt/ruby/bin:$PATH
+# Use Brew postgresql
+export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
+
 
 # mac fix to allow to jum over a word
 bindkey "^[^[[C" forward-word
