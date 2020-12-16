@@ -1,7 +1,10 @@
 
+# set this at end of ~/.zshrc 
+# echo 'source $HOME/Dropbox/.myzshconfig' >> ~/.oh-my-zsh-config
+
 # Aliases for lazy people =D
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' -    -abbrev-commit"
-alias gs="git status"kkkjjk
+alias gs="git status"
 
 # Allow to ssh into a docker container by passing the container id
 dssh() {
@@ -19,3 +22,10 @@ bindkey "^[^[[D" backward-word
 # load pure prompt after zsh stuff
 autoload -U promptinit; promptinit
 prompt pure
+
+
+# HSTR configuration - add this to ~/.zshrc
+alias hh=hstr                    # hh to be alias for hstr
+setopt histignorespace           # skip cmds w/ leading space from history
+export HSTR_CONFIG=hicolor       # get more colors
+bindkey -s "\C-r" "\C-a hstr -- \C-j"     # bind hstr to Ctrl-r (for Vi mode check doc)
