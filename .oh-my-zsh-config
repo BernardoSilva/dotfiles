@@ -35,6 +35,8 @@ export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
 bindkey "^[^[[C" forward-word
 bindkey "^[^[[D" backward-word
 
+export PIPENV_VENV_IN_PROJECT=1
+
 # load pure prompt after zsh stuff
 autoload -U promptinit; promptinit
 prompt pure
