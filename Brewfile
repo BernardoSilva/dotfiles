@@ -33,6 +33,7 @@ brew "tig"
 brew "the_silver_searcher"
 cask "the-unarchiver"
 cask "vlc"
+brew "watchman"
 brew "xz"
 brew "zsh"
 brew "zsh-syntax-highlighting"  # add to plugin using oh-my-zh
