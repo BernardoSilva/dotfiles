@@ -30,6 +30,9 @@ export PATH=/usr/local/opt/ruby/bin:$PATH
 # Use Brew postgresql
 export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
 
+# Set GO env variables
+export GOPATH=$HOME/go
+export PATH="$PATH:$GOPATH/bin"
 
 # mac fix to allow to jum over a word
 bindkey "^[^[[C" forward-word
