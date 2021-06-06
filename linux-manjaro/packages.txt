@@ -1,0 +1,42 @@
+pacman -S chromium
+pacman -S base-devel
+pacman -S pyenv
+pacman -S docker docker-compose
+sudo snap install pycharm-professional --classic
+pacman -S npm
+pacman -S vim
+
+systemctl start docker.service
+systemctl enable docker.service
+snap install spotify
+sudo systemctl enable --now snapd.socket
+sudo snap install slack --classic
+sudo snap install postman
+
+# required to install the the-edge requirements.txt
+pacman -S postgresql-libs
+
+packman -S postgresql
+sudo systemctl enable --now postgresql.service
+
+pacman -S yay
+
+# pair logitech mouse, check pairing_tool README
+yay pairing_tool
+grep "Logitech USB Receiver" /sys/class/hidraw/hidraw*/device/uevent
+sudo pairing_tool /dev/hidraw4
+
+# install pure prompt
+sudo npm install --global pure-prompt
+
+sudo pacman -S the_silver_searcher
+pacman -S ttf-fira-code
+sudo pacman -S github-cli
+
+
+sudo pacman -Syu zsh
+
+
+https://gist.github.com/BernardoSilva/c0fc7f5c185c96e2b3b2771688ef0f99
+
+chsh -s $(which zsh)
